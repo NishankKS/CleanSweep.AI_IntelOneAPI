@@ -1,4 +1,4 @@
-# CleanSweep.AI
+# CleanSweep.AI (powered by Intel oneAPI)
 A-EYE on SCATTERED GARBAGE! An AI & ML solution to solve some of the basic but most important problems in day to day life.  
 
 
