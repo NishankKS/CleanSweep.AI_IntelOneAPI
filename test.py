@@ -167,7 +167,7 @@ def model(path):
   except:
     pass
   print("Percentage that is not clean "+str(sum(li)*100/len(li)))
-  density = 0.85
+  density = (sum(li)/len(li))
   g= geocoder.ip('me')
   lat, lon = g.latlng
   k=[lat,lon]
