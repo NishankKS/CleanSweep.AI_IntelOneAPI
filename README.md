@@ -29,7 +29,7 @@ System Workflow:-
 Steps to run this project:  
 STEP 1: Download the models and the weights from the drive link provided below.  
 STEP 2: Clone the GitHub repository.  
-STEP 3: Create a new Conda environment and install the required libraries present in the requirements.txt through the Intel channel.
+STEP 3: Create a new Conda environment and install the required libraries present in the requirements.txt through the Intel channel.  
 STEP 4: Run the code provided below in the terminal of the project folder.
 
 Install the requirements:
