@@ -22,7 +22,21 @@ The toolkits have support for a number of pre-trained models such as MobileNetV1
 
 The Scrap Detection model is executed on the local system wherein an environment is created and Tensorflow is installed through the Intel channel. The AI Analytics Toolkit is used to install and optimize all the libraries which are present in the project.  
 
-System Workflow:-
+## Time Elapsed  
+
+
+![base](https://user-images.githubusercontent.com/80829447/225950360-10c74071-f839-4135-828c-0f70bcd87f01.jpg)  
+Time taken for the project to execute without oneAPI(base environment) : 1.59 seconds
+
+![oneapi](https://user-images.githubusercontent.com/80829447/225950391-897195cb-0e69-47a7-aace-efd4452969f7.jpg)  
+Time taken for the project to execute with oneAPI(oneapi environment) : 1.43 seconds  
+
+Hence, we observe a difference of 0.16 seconds which is obtained with the help of oneAPI libraries.  
+
+  
+  
+
+## System Workflow:-
 ![Flowchart](https://user-images.githubusercontent.com/80829447/208266806-8d21746e-7aa9-4147-8169-4d3ae4e526b1.png)
 
 
