@@ -33,6 +33,8 @@ Run the app:
 streamlit run app.py
 ```
 
+Cleansweep.AI uses the openVINO toolkit to optimize the processing of the object detection model to detect the scattared garbage detected from the input video . 
+
 Collaborators:  
 Mani Kanta: https://github.com/Manikanta-7342  
 Akhil: https://github.com/Akhil5347  
