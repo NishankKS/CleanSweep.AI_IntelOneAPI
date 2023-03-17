@@ -32,12 +32,21 @@ Run the app:
 ```
 streamlit run app.py
 ```
+#Toolkit used : Intel® AI Analytics Toolkit (AI Kit) - oneDNN (Deep Neural Network Library) and Intel® Distribution of OpenVINO™ Toolkit
 
-Cleansweep.AI uses the openVINO toolkit to optimize the processing of the object detection model to detect the scattared garbage  from the input video . The detected scrab density determines to which authority , the alert message should be sent.
+Cleansweep.AI uses the openVINO toolkit to optimize the processing of the object detection model to detect the scattared garbage  from the input video . The detected scrab density determines to which authority , the alert message should be sent. The Intel® AI Analytics Toolkit (AI Kit) helps in achieving better results by optimising the models with the help of oneAPI Deep Neural Network Library (oneDNN).
+The toolkits have support for a number of pre-trained models such as MobileNetV1,which can achieve accurate and efficient effect in  CLeanSweepAI and help to improve the performance.
+
+
+![image](https://user-images.githubusercontent.com/92366411/225904033-084ef650-47a9-43de-b0bc-f4fb038eac8d.png)
+
+The Scrab Detection model is executed on the local system wherein an environment is created and Tensorflow is installed through the Intel channel. The AI Analytics Toolkit is used to install and optimize all the libraries which are present in the project.
+
 
 
 Collaborators:  
 Mani Kanta: https://github.com/Manikanta-7342  
 Akhil: https://github.com/Akhil5347  
 Shreyas: https://github.com/ShreyasKuntnal
+Nishank:https://github.com/NishankKS
 
