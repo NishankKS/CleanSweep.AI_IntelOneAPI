@@ -10,7 +10,7 @@ Objective:- The goal is design an object classification model which segregates g
 The video is processed and the density of garbage is then calculated and the processed through a machine learning algorithm.
 If garbage is detected is greater than a certain threshold, then the concerned authorities are intimated with help of an escalation algorithm.
 
-Solution:- The solution to solve the above problem is implementing a Garbage Detection Model using the Single Shot Detector Algorithm whcih is trained on the TACO Dataset.  
+Solution:- The solution to solve the above problem is implementing a Garbage Detection Model using the Single Shot Detector Algorithm which is trained on the TACO Dataset.  
 
 # Toolkits used : Intel® AI Analytics Toolkit (AI Kit) - oneDNN (Deep Neural Network Library) and Intel® Distribution of OpenVINO™ Toolkit
 
