@@ -29,7 +29,7 @@ class ThreadWithReturnValue(Thread):
         return self._return
 
 def sms(t1,lat,lon,auth):
-  sid = 'AC0b246b4a64109de691920c953996cded'
+  sid = 'ENTER_YOUR_TWILIO_AUTH_ID'
   geolocator = Nominatim(user_agent="geoapiExercises")
   location = geolocator.reverse(str(lat) + "," +str(lon))
   address = location.raw['address']
@@ -41,22 +41,22 @@ def sms(t1,lat,lon,auth):
   cl.messages.create(body=f"{case}\nScrap detected Time: {t1}\nLocation: {google_maps_link}\nAddress: {address}", from_ = '+13853967299', to = '+919392956575')
 
 def call(lat,lon,auth):
-  account_sid = 'AC0b246b4a64109de691920c953996cded'
+  account_sid = 'ENTER_YOUR_TWILIO_AUTH_ID'
   client = Client(account_sid, auth)
   call = client.calls.create(twiml="<Response><Gather action=\"/gather_results\" digits=\"1\"><Say>Attention Required!! Garbage Detected... Garbage Detected... Garbage detected</Say></Gather></Response>",
-    from_='+13853967299',
-    to='+919392956575'
+    from_='+YOUR_TWILIO_PHONE_NUMBER',
+    to='+RECEIVER_PHONE_NUMBER'
   )
   print(call.sid)
 
 def whatsapp1(lat, lon,auth):
-  account_sid = 'AC0b246b4a64109de691920c953996cded'
+  account_sid = 'ENTER_YOUR_TWILIO_AUTH_ID'
   client = Client(account_sid, auth)
   message = client.messages.create(
     body='Dayananda Sagar College of Engineering,Bengaluru',
     persistent_action=[f'geo:{lat},{lon}'],
-    from_='whatsapp:+1415523-8886',
-    to='whatsapp:+919392956575'
+    from_='whatsapp:+YOUR_TWILIO_PHONE_NUMBER',
+    to='whatsapp:+RECEIVER_PHONE_NUMBER'
   )
 
   print(message.sid)
@@ -69,8 +69,8 @@ def email_generate(t1, lattitude, longitude,auth_pass):
   location = geolocator.reverse(str(lattitude) + "," + str(Longitude))
   address = location.raw['address']
   google_maps_link = f"https://www.google.com/maps/search/?api=1&query={float(Lattitude)},{float(Longitude)}"
-  from_address = "mgakhil04@gmail.com"#Provide your mail id
-  to_address = "mgakhil03@gmail.com"#Provide receiver mail id
+  from_address = "FROM_EMAIL"#Provide your mail id
+  to_address = "RECEIVER_EMAIL"#Provide receiver mail id
   subject = "Test Email"
   case = "Attention Required!!"
   address = list(address.values())
@@ -119,9 +119,9 @@ with tab_ove:
         st.image(im)
 with tab_cle:
     #provide your auth id from twilio
-    auth= "b5b01672eee7ba30a0874c85a20baf29"
+    auth= "ENTER_YOUR_TWILIO_AUTH_ID"
     #provide your gmail app password
-    app_pass = "qirelusjswzhynjw"
+    app_pass = "ENTER_YOUR_GMAIL_PASSWORD"
     d1, d2 = st.columns(2)
     with d1:
         st.header("Assumptions:")
