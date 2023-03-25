@@ -13,8 +13,8 @@ import os
 os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
 
 def sms(t1,lat,lon):
-  auth = "b5b01672eee7ba30a0874c85a20baf29"
-  sid = 'AC0b246b4a64109de691920c953996cded'
+  auth = "ENTER_YOUR_TWILIO_AUTH_PASS"
+  sid = 'ENTER_YOUR_TWILIO_AUTH_ID'
   geolocator = Nominatim(user_agent="geoapiExercises")
   location = geolocator.reverse(str(lat) + "," +str(lon))
   address = location.raw['address']
@@ -26,30 +26,30 @@ def sms(t1,lat,lon):
   cl.messages.create(body=f"{case}\nScrap detected Time: {t1}\nLocation: {google_maps_link}\nAddress: {address}", from_ = '+13853967299', to = '+918897946277')
 
 def call(lat,lon):
-  auth="b5b01672eee7ba30a0874c85a20baf29"
-  account_sid = 'AC0b246b4a64109de691920c953996cded'
+  auth="ENTER_YOUR_TWILIO_AUTH_PASS"
+  account_sid = 'ENTER_YOUR_TWILIO_AUTH_ID'
   client = Client(account_sid, auth)
   call = client.calls.create(twiml="<Response><Gather action=\"/gather_results\" digits=\"1\"><Say>Attention Required!! Garbage Detected... Garbage Detected... Garbage detected</Say></Gather></Response>",
-    from_='+13853967299',
-    to='+919392956575'
+    from_='+YOUR_TWILIO_PHONE_NUMBER',
+    to='+RECEIVER_PHONE_NUMBER'
   )
   print(call.sid)
 
 def whatsapp1(lat, lon):
-  account_sid = 'AC0b246b4a64109de691920c953996cded'
-  auth='b5b01672eee7ba30a0874c85a20baf29'
+  account_sid = 'ENTER_YOUR_TWILIO_AUTH_ID'
+  auth='ENTER_YOUR_TWILIO_AUTH_PASS'
   client = Client(account_sid, auth)
   message = client.messages.create(
     body='Dayananda Sagar College of Engineering,Bengaluru',
     persistent_action=[f'geo:{lat},{lon}'],
-    from_='whatsapp:+1415523-8886',
-    to='whatsapp:+919392956575'
+    from_='whatsapp:+YOUR_TWILIO_PHONE_NUMBER',
+    to='whatsapp:+RECEIVER_PHONE_NUMBER'
   )
 
   print(message.sid)
 
 def email_generate(t1, lattitude, longitude):
-  app_pass = "qirelusjswzhynjw"
+  app_pass = "ENTER_YOUR_GMAIL_PASSWORD"
   geolocator = Nominatim(user_agent="MyApp")
   #tval = t2 - t1
   Longitude = longitude
